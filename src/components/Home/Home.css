@@ -1,0 +1,73 @@
+.Home{
+    max-width: 1440px;
+    max-height: 768px;
+    margin: auto;
+    background-size: 100% 100vh;
+    transition: 0.3s;
+    overflow: hidden;
+}
+/* ============= header =============== */
+.Header{
+    width: 90%;
+    height: 30px;
+    margin: auto;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Header img{
+    width: 120px;
+}
+.Header .anchors{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.Header .anchors a{
+    font-size: 18px;
+}
+
+/* ============== hero section ============= */
+.HeroIntro{
+    min-height: calc(100vh - 80px);
+    margin: auto;
+    margin-top: 150px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+}
+.HeroIntro .leftContent{
+    width: 55%;
+    margin-left: 70px;
+}
+.HeroIntro .rightContent{
+    width: 40%;
+}
+.HeroIntro .content img{
+    width: 550px;
+}
+.HeroIntro .itemChoices{
+    display: flex;
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+}
+.HeroIntro .itemChoices img{
+    width: 80px;
+    cursor: pointer;
+}
+.activeLine{
+    width: 90%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: white;
+    transition: 0.3s;
+}
+.HeroIntro .rightContent img{
+    width: 1400px;
+    position: relative;
+    left: -350px;
+    top: 0;
+    transition: 0.8s;
+}

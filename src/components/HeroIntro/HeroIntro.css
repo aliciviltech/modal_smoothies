@@ -1,0 +1,25 @@
+.HeroIntro{
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+}
+.HeroIntro .leftContent{
+    width: 60%;
+    margin-left: 70px;
+}
+.HeroIntro .rightContent{
+    width: 40%;
+}
+.HeroIntro .content img{
+    width: 550px;
+}
+.HeroIntro .itemChoices{
+    display: flex;
+    gap: 30px;
+}
+.HeroIntro .itemChoices img{
+    width: 80px;
+    cursor: pointer;
+}
+.HeroIntro .rightContent img{}
