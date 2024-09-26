@@ -1,35 +1,51 @@
-.Home{
+.Home {
     max-width: 1440px;
     max-height: 768px;
     margin: auto;
-    background-size: 100% 100vh;
+    background-size: 100% 100%;
     transition: 0.3s;
     overflow: hidden;
 }
+
 /* ============= header =============== */
-.Header{
+.Header {
     width: 90%;
-    height: 30px;
+    height: fit-content;
     margin: auto;
     padding-top: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
-.Header img{
+
+.Header img {
     width: 120px;
 }
-.Header .anchors{
+
+.Header .anchors {
     display: flex;
     gap: 50px;
     align-items: center;
 }
-.Header .anchors a{
+
+.Header .anchors a {
     font-size: 18px;
+    color: #ffffff;
+}
+
+.Header .menuBars {
+    color: #ff0059;
+    background-color: #ffffff;
+    padding: 5px 7px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    display: none;
 }
 
 /* ============== hero section ============= */
-.HeroIntro{
+.HeroIntro {
     min-height: calc(100vh - 80px);
     margin: auto;
     margin-top: 150px;
@@ -37,37 +53,211 @@
     gap: 30px;
     justify-content: space-around;
 }
-.HeroIntro .leftContent{
+
+.HeroIntro .leftContent {
     width: 55%;
     margin-left: 70px;
 }
-.HeroIntro .rightContent{
+
+.HeroIntro .rightContent {
+    position: relative;
     width: 40%;
 }
-.HeroIntro .content img{
+
+.HeroIntro .content img {
     width: 550px;
 }
-.HeroIntro .itemChoices{
+.HeroIntro .content p {
+    width: 550px;
+}
+.HeroIntro .content button{
+    border-radius: 20px;
+    background-color: #ff0059;
+    color: #ffffff;
+    height: 40px;
+    width: 100px;
+    border: none;
+    margin: 50px 0; 
+}
+
+.HeroIntro .itemChoices {
     display: flex;
     gap: 30px;
     position: relative;
     z-index: 1;
 }
-.HeroIntro .itemChoices img{
+
+.HeroIntro .itemChoices img {
     width: 80px;
     cursor: pointer;
 }
-.activeLine{
+
+.activeLine {
     width: 90%;
     height: 4px;
     border-radius: 4px;
     background-color: white;
     transition: 0.3s;
 }
-.HeroIntro .rightContent img{
+
+.HeroIntro .rightContent img {
     width: 1400px;
     position: relative;
     left: -350px;
     top: 0;
     transition: 0.8s;
+}
+
+.rotation1 {
+    rotate: -10deg;
+}
+
+.rotation2 {
+    rotate: -110deg;
+}
+
+.rotation3 {
+    rotate: -190deg;
+}
+
+.rotation4 {
+    rotate: -280deg;
+}
+
+@media screen and (max-width:1024px) {
+    .Home {
+        max-height: unset;
+        height: fit-content;
+        min-height: 100vh;
+    }
+
+    .HeroIntro {
+        min-height: fit-content;
+        margin: auto;
+        margin-top: 150px;
+        flex-direction: column;
+    }
+
+    .HeroIntro .leftContent {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .HeroIntro .rightContent {
+        position: relative;
+        width: 90%;
+        margin: auto;
+        max-height: 450px;
+        margin-top: 50px;
+        overflow: hidden;
+    }
+
+    .HeroIntro .rightContent img {
+        left: unset;
+        right: calc(600px - 35vw);
+        top: 0;
+        transition: 0.8s;
+    }
+
+    .rotation1 {
+        rotate: -2deg;
+    }
+
+    .rotation2 {
+        rotate: -95deg;
+    }
+
+    .rotation3 {
+        rotate: -180deg;
+    }
+
+    .rotation4 {
+        rotate: -270deg;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+
+    /* ============= header section ============== */
+    .Header .anchors {
+        position: absolute;
+        top: 100px;
+        right: -100vw;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 20px;
+        gap: 20px;
+        align-items: center;
+        background-color: #ffffff;
+        border-radius: 20px;
+        transition: 0.3s;
+    }
+
+    .Header .displayNav {
+        right: 0;
+        transition: 0.3s;
+    }
+
+    .Header .menuBars {
+        display: flex;
+    }
+
+    /* ============= hero section ================= */
+
+    .HeroIntro .content img {
+        width: 90vw;
+    }
+
+    .HeroIntro .content p {
+        width: 90vw;
+    }
+
+    .HeroIntro .rightContent {
+        max-height: 300px;
+    }
+
+    .HeroIntro .rightContent img {
+        width: 900px;
+        left: unset;
+        right: calc(500px - 55vw);
+        top: 0;
+    }
+
+    .HeroIntro .itemChoices {
+        gap: 4vw;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .HeroIntro .itemChoices {
+        gap: 4vw;
+        position: relative;
+        z-index: 1;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 30px;
+    }
+
+    .rotation1 {
+        rotate: 3deg;
+    }
+
+    .rotation2 {
+        rotate: -88deg;
+    }
+
+    .rotation3 {
+        rotate: -174deg;
+    }
+
+    .rotation4 {
+        rotate: -266deg;
+    }
 }
